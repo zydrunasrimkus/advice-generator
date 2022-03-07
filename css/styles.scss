@@ -1,0 +1,89 @@
+/* FONT */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap");
+
+/* PRIMARY COLORS */
+$light-cyan: hsl(193, 38%, 86%);
+$neon-green: hsl(150, 100%, 66%);
+
+/* SECONDARY COLORS */
+$grayish-blue: hsl(217, 19%, 38%);
+$dark-grayish: hsl(217, 19%, 24%);
+$dark-blue: hsl(218, 23%, 16%);
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background: $dark-blue;
+}
+
+span,
+button {
+  display: inline-block;
+}
+#quotes {
+  height: 100vh;
+  overflow: hidden;
+  @include flex-center();
+  .quotes__wrapper {
+    position: relative;
+    background: $dark-grayish;
+    @include flex-center();
+    flex-direction: column;
+    border-radius: 1.5rem;
+    width: 550px;
+    .quotes--id {
+      color: $neon-green;
+      text-transform: uppercase;
+      margin: 2rem 0;
+      font-weight: 800;
+      font-size: 0.85rem;
+    }
+    .quotes--advice {
+      color: $light-cyan;
+      margin-bottom: 2rem;
+      font-size: 1.75rem;
+      text-align: center;
+      font-weight: 800;
+      padding: 0 3rem;
+    }
+    .pattern-divider {
+      margin-bottom: 4rem;
+    }
+    .quotes--button {
+      position: absolute;
+      background: $neon-green;
+      border: none;
+      outline: none;
+      width: 60px;
+      height: 60px;
+      bottom: -30px;
+      border-radius: 50%;
+      transition: filter 0.25s ease;
+      &:hover {
+        cursor: pointer;
+        filter: drop-shadow(0 0 0.5rem $neon-green);
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .quotes__wrapper {
+      max-width: 400px;
+      width: 100%;
+      margin: 0 1rem;
+    }
+  }
+}
