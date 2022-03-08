@@ -23,7 +23,7 @@ const showQuote = () => {
       document.querySelector(".quotes--id").innerText = `advice #${id}`;
 
       //insert advice
-      document.querySelector(".quotes--advice").innerText = `"${advice}"`;
+      document.querySelector(".quotes--advice").innerHTML = `<h1>"${advice}"</h1>`;
     })
     .catch((err) => console.error(err));
 };

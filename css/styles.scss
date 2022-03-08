@@ -51,19 +51,23 @@ button {
       margin: 2rem 0;
       font-weight: 800;
       font-size: 0.85rem;
+      letter-spacing: 0.5rem;
     }
     .quotes--advice {
       color: $light-cyan;
       margin-bottom: 2rem;
-      font-size: 1.75rem;
-      text-align: center;
-      font-weight: 800;
       padding: 0 3rem;
+      h1 {
+        font-weight: 800;
+        font-size: 1.75rem;
+        text-align: center;
+      }
     }
     .pattern-divider {
       margin-bottom: 4rem;
     }
     .quotes--button {
+      @include flex-center();
       position: absolute;
       background: $neon-green;
       border: none;

@@ -62,15 +62,19 @@ button {
   margin: 2rem 0;
   font-weight: 800;
   font-size: 0.85rem;
+  letter-spacing: 0.5rem;
 }
 
 #quotes .quotes__wrapper .quotes--advice {
   color: #cee3e9;
   margin-bottom: 2rem;
+  padding: 0 3rem;
+}
+
+#quotes .quotes__wrapper .quotes--advice h1 {
+  font-weight: 800;
   font-size: 1.75rem;
   text-align: center;
-  font-weight: 800;
-  padding: 0 3rem;
 }
 
 #quotes .quotes__wrapper .pattern-divider {
@@ -78,6 +82,15 @@ button {
 }
 
 #quotes .quotes__wrapper .quotes--button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
   background: #52ffa8;
   border: none;
